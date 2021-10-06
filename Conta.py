@@ -19,14 +19,23 @@ class Conta:
         self.Sacar(valor)               # Exemplo: conta2.Transferir(10.0, conta1)
         destino.Depositar(valor)
 
-    def get_saldo(self):
+                                # GETTERS
+
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
 
-    def set_limite(self, limite):
+                                # SETTERS
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
+
+#Implementar Staticamethod
